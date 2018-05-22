@@ -20,7 +20,7 @@
          * @param str  Cadena de texto con cual rellenar
          *
          */
-        lPad: function(source.len, str) {
+        lPad: function(source, len, str) {
             return len > source.length 
                  ? (new Array((len - this.length) + 1).join(str)) + source 
                  : source;
