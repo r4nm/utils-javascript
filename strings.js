@@ -1,3 +1,4 @@
+/* @author: Rodrigo Nannig */
 (function(window, undefined) {
     var Strings = Strings || function() {
             return (new Strings.fn.init());
