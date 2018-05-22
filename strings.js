@@ -20,10 +20,10 @@
          * @param str  Cadena de texto con cual rellenar
          *
          */
-        lpad: function(len, str) {
-            return len > this.length 
-                 ? (new Array((len - this.length) + 1).join(str)) + this 
-                 : this;
+        lPad: function(source.len, str) {
+            return len > source.length 
+                 ? (new Array((len - this.length) + 1).join(str)) + source 
+                 : source;
         },
         
         /**
@@ -33,10 +33,10 @@
          * @param str  Cadena de texto con cual rellenar
          *
          */
-        rpad: function(len, str) {
-            return len > this.length 
-                 ? this + (new Array((len - this.length) + 1).join(str))
-                 : this;
+        rPad: function(source, len, str) {
+            return len > source.length 
+                 ? source + (new Array((len - this.length) + 1).join(str))
+                 : source;
         },
 
         /**
@@ -73,16 +73,12 @@
 })(window);
 
 /* Prototypes */
-String.prototype.lpad = function(len, str) {
-    return len > this.length 
-           ? (new Array((len - this.length) + 1).join(str)) + this 
-           : this;
+String.prototype.lPad = function(len, str) {
+    return Strings.lPad(this, len, str);
 }
 
-String.prototype.rpad = function(len, str) {
-    return len > this.length 
-           ? this + (new Array((len - this.length) + 1).join(str))
-           : this;
+String.prototype.rPad = function(len, str) {
+    return Strings.rPad(this, len, str);
 }
 
 String.prototype.swap = function(a, b) {
